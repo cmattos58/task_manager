@@ -7,13 +7,13 @@ from rest_framework_simplejwt.views import (
 )
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'projects', ProjectViewSet)
-router.register(r'tasks', TaskViewSet)
-router.register(r'tags', TagViewSet)
+router.register(r"users", UserViewSet)
+router.register(r"projects", ProjectViewSet)
+router.register(r"tasks", TaskViewSet)
+router.register(r"tags", TagViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path("", include(router.urls)),
+    path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]
