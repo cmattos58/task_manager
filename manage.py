@@ -4,6 +4,9 @@ import os
 import sys
 
 
+print(sys.argv)
+
+
 def run_flake8():
     """Run Flake8 linting."""
     os.system("flake8")

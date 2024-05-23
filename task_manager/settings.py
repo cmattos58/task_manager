@@ -81,23 +81,17 @@ WSGI_APPLICATION = "task_manager.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("DATABASE_NAME"),
-        "USER": config("DATABASE_USER"),
-        "PASSWORD": config("DATABASE_PASSWORD"),
-        "HOST": config("DATABASE_HOST"),
-        "PORT": config("DATABASE_PORT"),
-        "OPTIONS": {
-            "options": f"-c search_path={config('DATABASE_SCHEMA')}",
-        },
-        "TEST": {
-            "NAME": "test_task_manager",
-            "OPTIONS": {
-                "options": "-c search_path=test",
-            }
-        },
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': config('DATABASE_HOST'),
+        'PORT': config('DATABASE_PORT'),
+        'OPTIONS': {
+            'options': f"-c search_path={config('DATABASE_SCHEMA')}",
+        }
+    }
 }
 
 
@@ -159,3 +153,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
